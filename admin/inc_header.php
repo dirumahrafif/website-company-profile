@@ -1,5 +1,6 @@
 <?php 
 include("../inc/inc_koneksi.php");
+include("../inc/inc_fungsi.php");
 ?>
 
 <!DOCTYPE html>

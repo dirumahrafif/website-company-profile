@@ -80,3 +80,17 @@ function maximum_kata($isi,$maximum){
     $isi = implode(" ",$array_isi);
     return $isi;
 }
+
+function tutors_foto($id){
+    global $koneksi;
+    $sql1   = "select * from tutors where id = '$id'";
+    $q1     = mysqli_query($koneksi,$sql1);
+    $r1     = mysqli_fetch_array($q1);
+    $foto   = $r1['foto'];
+
+    if($foto){
+        return $foto;
+    }else{
+        return 'tutors_default_picture.png';
+    }
+}
