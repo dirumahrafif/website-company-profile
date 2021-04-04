@@ -94,3 +94,37 @@ function tutors_foto($id){
         return 'tutors_default_picture.png';
     }
 }
+
+function buat_link_tutors($id){
+    global $koneksi;
+    $sql1    = "select * from tutors where id = '$id'";
+    $q1     = mysqli_query($koneksi,$sql1);
+    $r1     = mysqli_fetch_array($q1);
+    $nama  = bersihkan_judul($r1['nama']);
+    // http://localhost/website-company-profile/halaman.php/8/judul
+    return url_dasar()."/tutors.php/$id/$nama";
+}
+
+function partners_foto($id){
+    global $koneksi;
+    $sql1   = "select * from partners where id = '$id'";
+    $q1     = mysqli_query($koneksi,$sql1);
+    $r1     = mysqli_fetch_array($q1);
+    $foto   = $r1['foto'];
+
+    if($foto){
+        return $foto;
+    }else{
+        return 'partners_default_picture.png';
+    }
+}
+
+function buat_link_partners($id){
+    global $koneksi;
+    $sql1    = "select * from partners where id = '$id'";
+    $q1     = mysqli_query($koneksi,$sql1);
+    $r1     = mysqli_fetch_array($q1);
+    $nama  = bersihkan_judul($r1['nama']);
+    // http://localhost/website-company-profile/halaman.php/8/judul
+    return url_dasar()."/partners.php/$id/$nama";
+}
