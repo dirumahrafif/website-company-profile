@@ -254,3 +254,54 @@ h3 {
         width: 50%;
     }
 }
+
+/* tambahan dari pendaftaran dan verifikasi */
+table {
+    width: 600px;
+}
+
+@media screen and (max-width: 700px){
+    table {
+        width: 90%;
+    }
+}
+table td {
+    padding: 5px;
+}
+td.label { width: 40%;}
+.input {
+    border: 1px solid #CCCCCC;
+    background-color: #dfdfdf;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+input.tbl-biru {
+    border: none;
+    background-color: #3f72af;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 20px 15px 20px;
+    color:#FFFFFF;
+    cursor:pointer;
+    font-weight: bold;
+}
+input.tbl-biru:hover {
+    background-color: #fc5185;
+    text-decoration: none;
+}
+.error {
+    padding: 20px;
+    background-color: #f44336;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.sukses {
+    padding: 20px;
+    background-color: #2196F3;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.error ul { margin-left: 10px; }

@@ -1,4 +1,9 @@
 <?php 
+session_start();
+if($_SESSION['admin_username'] == ''){
+    header("location:login.php");
+    exit();
+}
 include("../inc/inc_koneksi.php");
 include("../inc/inc_fungsi.php");
 ?>
@@ -37,26 +42,32 @@ include("../inc/inc_fungsi.php");
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="index.php">Admin</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Admin Halaman</a>
+                            <a class="nav-link active" aria-current="page" href="halaman.php">Halaman</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Admin Tutors</a>
+                            <a class="nav-link" href="tutors.php">Tutors</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Admin Partner</a>
+                            <a class="nav-link" href="partners.php">Partner</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Admin Contact</a>
+                            <a class="nav-link" href="info.php">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Logout>></a>
+                            <a class="nav-link" href="members.php">Members</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ganti_profile.php">Ganti Password</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="logout.php">Logout>></a>
                         </li>
                     </ul>
                 </div>

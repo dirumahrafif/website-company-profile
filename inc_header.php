@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include_once("inc/inc_koneksi.php");
 include_once("inc/inc_fungsi.php");
 ?>
@@ -21,7 +22,13 @@ include_once("inc/inc_fungsi.php");
                     <li><a href="<?php echo url_dasar()?>#tutors">Tutors</a></li>
                     <li><a href="<?php echo url_dasar()?>#partners">Partners</a></li>
                     <li><a href="<?php echo url_dasar()?>#contact">Contact</a></li>
-                    <li><a href="" class="tbl-biru">Sign Up</a></li>
+                    <li>
+                    <?php if(isset($_SESSION['members_nama_lengkap'])){
+                        echo "<a href='".url_dasar()."/ganti_profile.php'>".$_SESSION['members_nama_lengkap']."</a> | <a href='".url_dasar()."/logout.php'>Logout</a>";
+                    }else{?>
+                        <a href="pendaftaran.php" class="tbl-biru">Sign Up</a>
+                    <?php } ?>
+                    </li>
                 </ul>
             </div>
         </div>

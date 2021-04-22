@@ -1,4 +1,9 @@
 <?php
+session_start();
+if($_SESSION['admin_username'] == ''){
+   header("location:login.php");
+   exit();
+}
 if ($_FILES['file']['name']) {
  if (!$_FILES['file']['error']) {
     $name = md5(rand(100, 200));

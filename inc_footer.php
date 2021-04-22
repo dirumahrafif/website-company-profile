@@ -4,21 +4,20 @@
         <div class="wrapper">
             <div class="footer">
                 <div class="footer-section">
-                    <h3>RumahRafif.</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, culpa!</p>
+                    <h3><?php echo ambil_isi_info('1','judul')?></h3>
+                    <?php echo ambil_isi_info('1','isi')?>
                 </div>
                 <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, culpa!</p>
+                    <h3><?php echo ambil_isi_info('2','judul')?></h3>
+                    <?php echo ambil_isi_info('2','isi')?>
                 </div>
                 <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p>Jl. Laksda Adisucipto Sleman Yogyakarta</p>
-                    <p>Kode Pos: 57365</p>
+                    <h3><?php echo ambil_isi_info('3','judul')?></h3>
+                    <?php echo ambil_isi_info('3','isi')?>
                 </div>
                 <div class="footer-section">
-                    <h3>Social</h3>
-                    <p><b>YouTube: </b>Programming di RumahRafif</p>
+                    <h3><?php echo ambil_isi_info('4','judul')?></h3>
+                    <?php echo ambil_isi_info('4','isi')?>
                 </div>
             </div>
         </div>
